@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Resources/danawaImg.jpg</file>
+        <file>Resources/adImg.PNG</file>
+        <file>Resources/enuriImg.PNG</file>
+        <file>Resources/FacebookImg.PNG</file>
+        <file>Resources/KaKaoImg.PNG</file>
+        <file>Resources/NaverImg.PNG</file>
+    </qresource>
+</RCC>
