@@ -23,6 +23,14 @@ public:
 private slots:
     void ShowSales(void); //로그인화면->판매실적화면
 
+    void btnStackBrandClicked();
+
+    void btnStackCarClicked();
+
+    void ChangeBStackPage();
+
+    void ChangeCStackPage();
+
 private:
     Ui::MainWindow *ui;
     LoginPage* l;

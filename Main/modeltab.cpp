@@ -6,6 +6,7 @@ ModelTab::ModelTab(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::ModelTab)
 {
+    typeNum=0;
     ui->setupUi(this);
     ui->stackedWidget->setCurrentIndex(0);
 
@@ -26,7 +27,7 @@ ModelTab::ModelTab(QWidget *parent)
     ui->tableWidget->setColumnWidth(1,560);
     ui->tableWidget->setColumnWidth(2,70);
     ui->tableWidget->setColumnWidth(3,70);
-    typeNum=0;
+
 }
 
 ModelTab::~ModelTab()
@@ -38,7 +39,15 @@ void ModelTab::ShowDefault()
 {
     //디폴트 화면 --23년 12월 전체 모델별 순위
     QSqlQuery qry;
-    qry.prepare("SELECT MODEL,\"2023_12\",\"2023_12\"/TOTAL(\"2023_12\") OVER() FROM CAR_TB ORDER BY \"2023_12\" DESC");
+    if(typeNum==0)
+    {
+        qry.prepare("SELECT MODEL,\"2023_12\",\"2023_12\"/TOTAL(\"2023_12\") OVER() FROM CAR_TB ORDER BY \"2023_12\" DESC");
+    }
+    else
+    {
+        qry.prepare("SELECT MODEL,\"2023_12\",\"2023_12\"/TOTAL(\"2023_12\") OVER() FROM CAR_TB WHERE CARTYPE="+QString::number(typeNum)+" ORDER BY \"2023_12\" DESC");
+    }
+
     qry.exec();
 
     UpdateTable(qry);
@@ -169,6 +178,7 @@ void ModelTab::btnShowClicked()
 void ModelTab::setCarType(int tnum)
 {
     typeNum=tnum;
+    ShowDefault();
 }
 //차종번호 해제
 void ModelTab::delCarType()
