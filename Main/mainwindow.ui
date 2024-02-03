@@ -813,6 +813,9 @@ border-image: url(:/resources/A.png);
               <height>70</height>
              </size>
             </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
            </widget>
            <widget class="QLabel" name="label_26">
             <property name="geometry">
@@ -859,6 +862,9 @@ border-image: url(:/resources/B.png);</string>
               <height>70</height>
              </size>
             </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
            </widget>
            <widget class="QPushButton" name="BtnCar3">
             <property name="geometry">
@@ -885,6 +891,9 @@ border-image: url(:/resources/C.png);</string>
               <width>70</width>
               <height>70</height>
              </size>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
             </property>
            </widget>
            <widget class="QLabel" name="label_27">
@@ -933,6 +942,9 @@ border-image: url(:/resources/D.png);
               <height>70</height>
              </size>
             </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
            </widget>
            <widget class="QLabel" name="label_28">
             <property name="geometry">
@@ -978,6 +990,9 @@ border-image: url(:/resources/E.png);</string>
               <width>70</width>
               <height>70</height>
              </size>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
             </property>
            </widget>
            <widget class="QLabel" name="label_29">
@@ -1025,6 +1040,9 @@ border-image: url(:/resources/J.png);</string>
               <height>70</height>
              </size>
             </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
            </widget>
            <widget class="QPushButton" name="BtnCar8">
             <property name="geometry">
@@ -1051,6 +1069,9 @@ border-image: url(:/resources/H.png);</string>
               <width>70</width>
               <height>70</height>
              </size>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
             </property>
            </widget>
            <widget class="QLabel" name="label_30">
@@ -1098,6 +1119,9 @@ border-image: url(:/resources/I.png);</string>
               <height>70</height>
              </size>
             </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
            </widget>
            <widget class="QPushButton" name="BtnCar7">
             <property name="geometry">
@@ -1125,6 +1149,9 @@ border-image: url(:/resources/G.png);</string>
               <height>70</height>
              </size>
             </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
            </widget>
            <widget class="QPushButton" name="BtnCar6">
             <property name="geometry">
@@ -1151,6 +1178,9 @@ border-image: url(:/resources/F.png);</string>
               <width>70</width>
               <height>70</height>
              </size>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
             </property>
            </widget>
            <widget class="QLabel" name="label_31">
@@ -1247,6 +1277,9 @@ border-image: url(:/resources/L.png);</string>
             <property name="text">
              <string/>
             </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
            </widget>
            <widget class="QPushButton" name="BtnCar11">
             <property name="geometry">
@@ -1263,6 +1296,9 @@ border-image: url(:/resources/K.png);</string>
             </property>
             <property name="text">
              <string/>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
             </property>
            </widget>
            <widget class="QLabel" name="label_35">
@@ -1555,7 +1591,7 @@ border-color: rgb(143, 143, 143);</string>
      <x>0</x>
      <y>0</y>
      <width>810</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

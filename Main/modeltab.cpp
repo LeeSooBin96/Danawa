@@ -175,11 +175,62 @@ void ModelTab::btnShowClicked()
     UpdateTable(qry);
 }
 //차종번호 저장
-void ModelTab::setCarType(int tnum)
+void ModelTab::setCarType1()
 {
-    typeNum=tnum;
+    typeNum=1;
     ShowDefault();
 }
+void ModelTab::setCarType2()
+{
+    typeNum=2;
+    ShowDefault();
+}
+void ModelTab::setCarType3()
+{
+    typeNum=3;
+    ShowDefault();
+}
+void ModelTab::setCarType4()
+{
+    typeNum=4;
+    ShowDefault();
+}
+void ModelTab::setCarType5()
+{
+    typeNum=5;
+    ShowDefault();
+}
+void ModelTab::setCarType6()
+{
+    typeNum=6;
+    ShowDefault();
+}
+void ModelTab::setCarType7()
+{
+    typeNum=7;
+    ShowDefault();
+}
+void ModelTab::setCarType8()
+{
+    typeNum=8;
+    ShowDefault();
+}
+void ModelTab::setCarType9()
+{
+    typeNum=9;
+    ShowDefault();
+}
+void ModelTab::setCarType10()
+{
+    typeNum=10;
+    ShowDefault();
+}
+void ModelTab::setCarType11()
+{
+    typeNum=11;
+    ShowDefault();
+}
+
 //차종번호 해제
 void ModelTab::delCarType()
 {

@@ -3,6 +3,9 @@
 
 #include <QWidget>
 #include <QString>
+#include <QSqlDatabase>
+#include <QSqlError>
+#include <QSqlQuery>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -29,10 +32,11 @@ private slots:
     void gotoSID();
     //비밀번호찾기화면으로
     void gotoSPW();
-
-\
+    //로그인 진행
+    void ProgressLogin();
 
 private:
     Ui::LoginPage *ui;
+    QSqlDatabase db;
 };
 #endif // LOGINPAGE_H

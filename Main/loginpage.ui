@@ -32,7 +32,7 @@
       <string notr="true">background-color: rgb(255, 255, 255);</string>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="page">
       <widget class="QLabel" name="label">
@@ -159,6 +159,9 @@ background-color: rgb(255, 255, 255);</string>
         <string notr="true">color: rgb(8, 8, 8);
 </string>
        </property>
+       <property name="placeholderText">
+        <string>아이디</string>
+       </property>
       </widget>
       <widget class="QPushButton" name="btnLogin">
        <property name="geometry">
@@ -203,6 +206,18 @@ border-radius: 10px;</string>
        <property name="styleSheet">
         <string notr="true">color: rgb(8, 8, 8);
 </string>
+       </property>
+       <property name="inputMethodHints">
+        <set>Qt::ImhHiddenText|Qt::ImhNoAutoUppercase|Qt::ImhNoPredictiveText|Qt::ImhSensitiveData</set>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+       <property name="placeholderText">
+        <string>비밀번호</string>
+       </property>
+       <property name="cursorMoveStyle">
+        <enum>Qt::LogicalMoveStyle</enum>
        </property>
       </widget>
       <widget class="QPushButton" name="btnSID">
@@ -366,6 +381,9 @@ border-radius: 10px;</string>
          <width>111</width>
          <height>24</height>
         </rect>
+       </property>
+       <property name="toolTip">
+        <string>(임시)비로그인 판매실적 조회</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(8, 8, 8);</string>
@@ -1575,6 +1593,42 @@ border:2px solid;</string>
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>Llogin</tabstop>
+  <tabstop>Lpw</tabstop>
+  <tabstop>btnLogin</tabstop>
+  <tabstop>btnStart</tabstop>
+  <tabstop>btnSID</tabstop>
+  <tabstop>btnSPW</tabstop>
+  <tabstop>btnJoin</tabstop>
+  <tabstop>checkBox</tabstop>
+  <tabstop>checkBox_2</tabstop>
+  <tabstop>checkBox_3</tabstop>
+  <tabstop>pushButton_6</tabstop>
+  <tabstop>btnHome</tabstop>
+  <tabstop>Ename</tabstop>
+  <tabstop>Ephone</tabstop>
+  <tabstop>Eid</tabstop>
+  <tabstop>Epw</tabstop>
+  <tabstop>btnCKphone</tabstop>
+  <tabstop>btnCKid</tabstop>
+  <tabstop>btnEnroll</tabstop>
+  <tabstop>btnBack</tabstop>
+  <tabstop>btnSearchID</tabstop>
+  <tabstop>SIphone</tabstop>
+  <tabstop>SIname</tabstop>
+  <tabstop>btnBack2</tabstop>
+  <tabstop>btnGTlogin</tabstop>
+  <tabstop>btnSPW2</tabstop>
+  <tabstop>btngotoSID</tabstop>
+  <tabstop>btnSearchPW</tabstop>
+  <tabstop>SPid</tabstop>
+  <tabstop>SPname</tabstop>
+  <tabstop>SPphone</tabstop>
+  <tabstop>btnBack3</tabstop>
+  <tabstop>btnGTlogin2</tabstop>
+  <tabstop>btngotoSPW</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>
@@ -1785,6 +1839,54 @@ border:2px solid;</string>
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>btnLogin</sender>
+   <signal>clicked()</signal>
+   <receiver>LoginPage</receiver>
+   <slot>ProgressLogin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>607</x>
+     <y>202</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>954</x>
+     <y>176</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Llogin</sender>
+   <signal>returnPressed()</signal>
+   <receiver>Lpw</receiver>
+   <slot>setFocus()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>380</x>
+     <y>110</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>376</x>
+     <y>156</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Lpw</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnLogin</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>409</x>
+     <y>159</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>409</x>
+     <y>191</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>gotoHome()</slot>
@@ -1792,5 +1894,6 @@ border:2px solid;</string>
   <slot>gotoJoin()</slot>
   <slot>gotoSID()</slot>
   <slot>gotoSPW()</slot>
+  <slot>ProgressLogin()</slot>
  </slots>
 </ui>

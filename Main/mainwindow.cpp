@@ -16,6 +16,7 @@ MainWindow::MainWindow(QWidget *parent)
     //각 페이지 ui연결
     m=new ModelTab(this);
     ui->connectstdWidget->addWidget(m);
+    //임시
     ui->connectstdWidget->setCurrentWidget(m);
 
     //브랜드 버튼 연결
@@ -32,21 +33,22 @@ MainWindow::MainWindow(QWidget *parent)
     // connect(ui->BtnBrand11,SIGNAL(clicked()),,SLOT());
 
     //모델탭 버튼 연결
+    connect(ui->btnModel,SIGNAL(clicked()),m,SLOT(delCarType()));
     connect(ui->btnModel,SIGNAL(clicked()),m,SLOT(ShowDefault()));
 
-    //차종 버튼 연결
-    // connect(ui->BtnCar1,SIGNAL(clicked()),m,SLOT(setCarType(int)));
-    // connect(ui->BtnCar2,SIGNAL(clicked()),m,SLOT(setCarType(int)));
-    // connect(ui->BtnCar3,SIGNAL(clicked()),m,SLOT(setCarType(int)));
-    // connect(ui->BtnCar4,SIGNAL(clicked()),m,SLOT(setCarType(int)));
-    // connect(ui->BtnCar5,SIGNAL(clicked()),m,SLOT(setCarType(int)));
-    // connect(ui->BtnCar6,SIGNAL(clicked()),m,SLOT(setCarType(int)));
-    // connect(ui->BtnCar7,SIGNAL(clicked()),m,SLOT(setCarType(int)));
-    // connect(ui->BtnCar8,SIGNAL(clicked()),m,SLOT(setCarType(int)));
-    // connect(ui->BtnCar9,SIGNAL(clicked()),m,SLOT(setCarType(int)));
-    // connect(ui->BtnCar10,SIGNAL(clicked()),m,SLOT(setCarType(int)));
-    // connect(ui->BtnCar11,SIGNAL(clicked()),m,SLOT(setCarType(int)));
-    // connect(ui->BtnCar12,SIGNAL(clicked()),m,SLOT(setCarType(int)));
+    //차종 버튼 연결 -- 함수원형을 써야해서 값전달이 안됨...
+    connect(ui->BtnCar1,SIGNAL(clicked()),m,SLOT(setCarType1()));
+    connect(ui->BtnCar2,SIGNAL(clicked()),m,SLOT(setCarType2()));
+    connect(ui->BtnCar3,SIGNAL(clicked()),m,SLOT(setCarType3()));
+    connect(ui->BtnCar4,SIGNAL(clicked()),m,SLOT(setCarType4()));
+    connect(ui->BtnCar5,SIGNAL(clicked()),m,SLOT(setCarType5()));
+    connect(ui->BtnCar6,SIGNAL(clicked()),m,SLOT(setCarType6()));
+    connect(ui->BtnCar7,SIGNAL(clicked()),m,SLOT(setCarType7()));
+    connect(ui->BtnCar8,SIGNAL(clicked()),m,SLOT(setCarType8()));
+    connect(ui->BtnCar9,SIGNAL(clicked()),m,SLOT(setCarType9()));
+    connect(ui->BtnCar10,SIGNAL(clicked()),m,SLOT(setCarType10()));
+    connect(ui->BtnCar11,SIGNAL(clicked()),m,SLOT(setCarType11()));
+
 }
 
 MainWindow::~MainWindow()
@@ -86,3 +88,5 @@ void MainWindow::ChangeCStackPage()
 {
     ui->carstack->setCurrentIndex((ui->carstack->currentIndex()+1)%2);
 }
+
+

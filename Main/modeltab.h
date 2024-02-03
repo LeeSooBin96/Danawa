@@ -31,7 +31,19 @@ private slots:
 
     //메인윈도우에서 차종 선택시 호출될 슬롯함수
     void ShowDefault(); //테이블 초기상태(23.12) 출력
-    void setCarType(int); //차종번호 저장
+    //차종번호 저장
+    void setCarType1();
+    void setCarType2();
+    void setCarType3();
+    void setCarType4();
+    void setCarType5();
+    void setCarType6();
+    void setCarType7();
+    void setCarType8();
+    void setCarType9();
+    void setCarType10();
+    void setCarType11();
+
     void delCarType(); //차종번호 해제
 
 private:
