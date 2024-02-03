@@ -32,7 +32,7 @@
       <string notr="true">background-color: rgb(255, 255, 255);</string>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>3</number>
      </property>
      <widget class="QWidget" name="page">
       <widget class="QLabel" name="label">
@@ -1047,6 +1047,9 @@ border:2px solid;</string>
           <string notr="true">color: rgb(8, 8, 8);</string>
          </property>
          <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
           <string>'-' 제외</string>
          </property>
         </widget>
@@ -1117,7 +1120,7 @@ border:2px solid;</string>
           <string>회원님의 계정을 찾았습니다.</string>
          </property>
         </widget>
-        <widget class="QLabel" name="label_26">
+        <widget class="QLabel" name="lblShowID">
          <property name="geometry">
           <rect>
            <x>140</x>
@@ -1128,14 +1131,19 @@ border:2px solid;</string>
          </property>
          <property name="font">
           <font>
-           <pointsize>13</pointsize>
+           <pointsize>18</pointsize>
+           <bold>true</bold>
+           <underline>true</underline>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">color: rgb(0, 0, 0);</string>
+          <string notr="true">color: rgb(0, 0, 255);</string>
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
         <widget class="QPushButton" name="btnGTlogin">
@@ -1308,7 +1316,7 @@ border:2px solid;</string>
         <string notr="true">color: rgb(0, 0, 0);</string>
        </property>
        <property name="currentIndex">
-        <number>2</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="page_9">
         <widget class="QPushButton" name="btnSearchPW">
@@ -1597,34 +1605,34 @@ border:2px solid;</string>
   <tabstop>Llogin</tabstop>
   <tabstop>Lpw</tabstop>
   <tabstop>btnLogin</tabstop>
-  <tabstop>btnStart</tabstop>
-  <tabstop>btnSID</tabstop>
-  <tabstop>btnSPW</tabstop>
-  <tabstop>btnJoin</tabstop>
-  <tabstop>checkBox</tabstop>
-  <tabstop>checkBox_2</tabstop>
-  <tabstop>checkBox_3</tabstop>
-  <tabstop>pushButton_6</tabstop>
-  <tabstop>btnHome</tabstop>
   <tabstop>Ename</tabstop>
   <tabstop>Ephone</tabstop>
   <tabstop>Eid</tabstop>
   <tabstop>Epw</tabstop>
+  <tabstop>btnEnroll</tabstop>
+  <tabstop>SIname</tabstop>
+  <tabstop>SIphone</tabstop>
+  <tabstop>btnSearchID</tabstop>
+  <tabstop>SPname</tabstop>
+  <tabstop>SPid</tabstop>
+  <tabstop>SPphone</tabstop>
+  <tabstop>btnSearchPW</tabstop>
+  <tabstop>checkBox</tabstop>
   <tabstop>btnCKphone</tabstop>
   <tabstop>btnCKid</tabstop>
-  <tabstop>btnEnroll</tabstop>
+  <tabstop>checkBox_2</tabstop>
   <tabstop>btnBack</tabstop>
-  <tabstop>btnSearchID</tabstop>
-  <tabstop>SIphone</tabstop>
-  <tabstop>SIname</tabstop>
-  <tabstop>btnBack2</tabstop>
+  <tabstop>pushButton_6</tabstop>
+  <tabstop>checkBox_3</tabstop>
+  <tabstop>btnSID</tabstop>
+  <tabstop>btnStart</tabstop>
   <tabstop>btnGTlogin</tabstop>
   <tabstop>btnSPW2</tabstop>
   <tabstop>btngotoSID</tabstop>
-  <tabstop>btnSearchPW</tabstop>
-  <tabstop>SPid</tabstop>
-  <tabstop>SPname</tabstop>
-  <tabstop>SPphone</tabstop>
+  <tabstop>btnJoin</tabstop>
+  <tabstop>btnBack2</tabstop>
+  <tabstop>btnHome</tabstop>
+  <tabstop>btnSPW</tabstop>
   <tabstop>btnBack3</tabstop>
   <tabstop>btnGTlogin2</tabstop>
   <tabstop>btngotoSPW</tabstop>
@@ -1887,6 +1895,54 @@ border:2px solid;</string>
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>btnSearchID</sender>
+   <signal>clicked()</signal>
+   <receiver>LoginPage</receiver>
+   <slot>SearchID()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>391</x>
+     <y>395</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>376</x>
+     <y>679</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SIname</sender>
+   <signal>returnPressed()</signal>
+   <receiver>SIphone</receiver>
+   <slot>setFocus()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>388</x>
+     <y>244</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>387</x>
+     <y>285</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SIphone</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnSearchID</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>401</x>
+     <y>311</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>405</x>
+     <y>382</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>gotoHome()</slot>
@@ -1895,5 +1951,6 @@ border:2px solid;</string>
   <slot>gotoSID()</slot>
   <slot>gotoSPW()</slot>
   <slot>ProgressLogin()</slot>
+  <slot>SearchID()</slot>
  </slots>
 </ui>

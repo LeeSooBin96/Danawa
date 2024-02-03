@@ -28,6 +28,8 @@ ModelTab::ModelTab(QWidget *parent)
     ui->tableWidget->setColumnWidth(2,70);
     ui->tableWidget->setColumnWidth(3,70);
 
+    //테이블 내용 정렬
+
 }
 
 ModelTab::~ModelTab()
@@ -110,11 +112,13 @@ void ModelTab::UpdateTable(QSqlQuery& qry)
                 sale=qry.value(1).toString();
             }
             item=new QTableWidgetItem(sale);
+            item->setTextAlignment(Qt::AlignCenter);
             ui->tableWidget->setItem(row,2,item);
 
             rate=QString::number(qry.value(2).toDouble()*100,'f',2);
             rate.append("%");
             item=new QTableWidgetItem(rate);
+            item->setTextAlignment(Qt::AlignCenter);
             ui->tableWidget->setItem(row,3,item);
             row++;
         }

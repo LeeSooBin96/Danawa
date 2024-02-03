@@ -92,4 +92,22 @@ void LoginPage::ProgressLogin()
         QMessageBox::critical(this,"경고 메시지","존재하지 않는 아이디이거나 틀린 비밀번호입니다.",QMessageBox::Ok);
     }
 }
-
+//아이디 찾기
+void LoginPage::SearchID()
+{
+    QSqlQuery qry;
+    qry.prepare("SELECT UID FROM USER_TB WHERE UNAME='"+ui->SIname->text()+"' AND UPHONE='"+ui->SIphone->text()+"'");
+    qry.exec();
+    qDebug()<<qry.lastQuery();
+    if(qry.next())
+    {
+        qDebug()<<qry.value(0).toString();
+        ui->SIDstackedWidget->setCurrentIndex(1);
+        ui->lblShowID->setText(qry.value(0).toString());
+    }
+    else
+    {
+        qDebug()<<"없음";
+        ui->SIDstackedWidget->setCurrentIndex(2);
+    }
+}

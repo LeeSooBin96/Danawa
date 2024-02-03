@@ -34,6 +34,8 @@ private slots:
     void gotoSPW();
     //로그인 진행
     void ProgressLogin();
+    //아이디 찾기
+    void SearchID();
 
 private:
     Ui::LoginPage *ui;
