@@ -28,6 +28,14 @@ private slots:
     void ChangeCStackPage();
 
 
+    void on_pushButton_clicked();
+
+    void on_btnModel_clicked();
+
+    void on_btnWhole_clicked();
+
+    void on_btnBrand_clicked();
+
 private:
     Ui::MainWindow *ui;
     LoginPage* l;

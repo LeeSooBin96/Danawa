@@ -36,6 +36,10 @@ private slots:
     void ProgressLogin();
     //아이디 찾기
     void SearchID();
+    //비밀번호 찾기
+    void SearchPW();
+
+    void on_pushButton_clicked();
 
 private:
     Ui::LoginPage *ui;

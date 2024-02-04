@@ -51,6 +51,11 @@
      </property>
      <item>
       <widget class="QPushButton" name="btnMonth">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(11, 11, 11);
 border: 1px solid;
@@ -65,13 +70,21 @@ border-color: rgb(143, 143, 143);</string>
        <property name="autoRepeatInterval">
         <number>100</number>
        </property>
+       <property name="autoDefault">
+        <bool>true</bool>
+       </property>
        <property name="flat">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="btnDuration">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(11, 11, 11);
 border: 1px solid;
@@ -80,8 +93,11 @@ border-color: rgb(143, 143, 143);</string>
        <property name="text">
         <string>기간 선택</string>
        </property>
+       <property name="autoDefault">
+        <bool>true</bool>
+       </property>
        <property name="flat">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -412,7 +428,7 @@ border-color: rgb(143, 143, 143);</string>
       <bool>false</bool>
      </attribute>
      <attribute name="horizontalHeaderDefaultSectionSize">
-      <number>30</number>
+      <number>34</number>
      </attribute>
      <attribute name="horizontalHeaderHighlightSections">
       <bool>false</bool>
@@ -475,8 +491,8 @@ border-color: rgb(143, 143, 143);</string>
    <slot>btnDurationClicked()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>398</x>
-     <y>15</y>
+     <x>808</x>
+     <y>16</y>
     </hint>
     <hint type="destinationlabel">
      <x>392</x>
@@ -491,8 +507,8 @@ border-color: rgb(143, 143, 143);</string>
    <slot>mMonthCurrentIndexChanged(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>360</x>
-     <y>65</y>
+     <x>500</x>
+     <y>71</y>
     </hint>
     <hint type="destinationlabel">
      <x>713</x>
@@ -507,8 +523,8 @@ border-color: rgb(143, 143, 143);</string>
    <slot>btnShowClicked()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>458</x>
-     <y>62</y>
+     <x>8</x>
+     <y>45</y>
     </hint>
     <hint type="destinationlabel">
      <x>670</x>

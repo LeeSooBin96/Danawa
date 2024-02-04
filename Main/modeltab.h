@@ -43,6 +43,7 @@ private slots:
     void setCarType9();
     void setCarType10();
     void setCarType11();
+    void setCarType12();
 
     void delCarType(); //차종번호 해제
 

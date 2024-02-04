@@ -32,7 +32,7 @@
       <string notr="true">background-color: rgb(255, 255, 255);</string>
      </property>
      <property name="currentIndex">
-      <number>3</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="page">
       <widget class="QLabel" name="label">
@@ -478,10 +478,13 @@ border-radius: 10px;</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(8, 8, 8);
-border-image: url(:/resources/NaverImg.PNG);</string>
+/*border-image: url(:/resources/NaverImg.PNG);*/</string>
        </property>
        <property name="text">
         <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="Resources.qrc">:/resources/NaverImg.PNG</pixmap>
        </property>
       </widget>
       <widget class="QLabel" name="label_10">
@@ -498,10 +501,13 @@ border-image: url(:/resources/NaverImg.PNG);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(8, 8, 8);
-border-image: url(:/resources/KaKaoImg.PNG);</string>
+/*border-image: url(:/resources/KaKaoImg.PNG);*/</string>
        </property>
        <property name="text">
         <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="Resources.qrc">:/resources/KaKaoImg.PNG</pixmap>
        </property>
       </widget>
       <widget class="QLabel" name="label_11">
@@ -518,10 +524,13 @@ border-image: url(:/resources/KaKaoImg.PNG);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(8, 8, 8);
-border-image: url(:/resources/FacebookImg.PNG);</string>
+/*border-image: url(:/resources/FacebookImg.PNG);*/</string>
        </property>
        <property name="text">
         <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="Resources.qrc">:/resources/FacebookImg.PNG</pixmap>
        </property>
       </widget>
       <widget class="QLabel" name="label_12">
@@ -538,10 +547,13 @@ border-image: url(:/resources/FacebookImg.PNG);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(8, 8, 8);
-border-image: url(:/resources/enuriImg.PNG);</string>
+/*border-image: url(:/resources/enuriImg.PNG);*/</string>
        </property>
        <property name="text">
         <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="Resources.qrc">:/resources/enuriImg.PNG</pixmap>
        </property>
       </widget>
       <widget class="QLabel" name="label_13">
@@ -555,10 +567,16 @@ border-image: url(:/resources/enuriImg.PNG);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(8, 8, 8);
-border-image: url(:/resources/adImg.PNG);</string>
+/*border-image: url(:/resources/adImg.PNG);*/</string>
        </property>
-       <property name="text">
-        <string/>
+       <property name="pixmap">
+        <pixmap resource="Resources.qrc">:/resources/adImg.PNG</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
       <widget class="QLabel" name="label_14">
@@ -608,6 +626,31 @@ border:2px solid;</string>
        </property>
        <property name="text">
         <string>이전</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>430</y>
+         <width>421</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(255, 255, 255,0);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoDefault">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
        </property>
       </widget>
      </widget>
@@ -673,6 +716,9 @@ border:2px solid;</string>
         <string notr="true">color: rgb(6, 6, 6);</string>
        </property>
        <property name="text">
+        <string/>
+       </property>
+       <property name="placeholderText">
         <string>'-' 제외</string>
        </property>
       </widget>
@@ -957,7 +1003,7 @@ border:2px solid;</string>
         <string notr="true">color: rgb(0, 0, 0);</string>
        </property>
        <property name="currentIndex">
-        <number>2</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="page_6">
         <widget class="QPushButton" name="btnSearchID">
@@ -1316,7 +1362,7 @@ border:2px solid;</string>
         <string notr="true">color: rgb(0, 0, 0);</string>
        </property>
        <property name="currentIndex">
-        <number>0</number>
+        <number>1</number>
        </property>
        <widget class="QWidget" name="page_9">
         <widget class="QPushButton" name="btnSearchPW">
@@ -1451,6 +1497,9 @@ border:2px solid;</string>
           </font>
          </property>
          <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
           <string>'-' 제외</string>
          </property>
         </widget>
@@ -1503,7 +1552,7 @@ border:2px solid;</string>
           <string>회원님의 비밀번호를 찾았습니다.</string>
          </property>
         </widget>
-        <widget class="QLabel" name="label_36">
+        <widget class="QLabel" name="lblShowPW">
          <property name="geometry">
           <rect>
            <x>130</x>
@@ -1514,14 +1563,19 @@ border:2px solid;</string>
          </property>
          <property name="font">
           <font>
-           <pointsize>13</pointsize>
+           <pointsize>18</pointsize>
+           <bold>true</bold>
+           <underline>true</underline>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">color: rgb(0, 0, 0);</string>
+          <string notr="true">color: rgb(0, 0, 255);</string>
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
         <widget class="QPushButton" name="btnGTlogin2">
@@ -1607,7 +1661,9 @@ border:2px solid;</string>
   <tabstop>btnLogin</tabstop>
   <tabstop>Ename</tabstop>
   <tabstop>Ephone</tabstop>
+  <tabstop>btnCKphone</tabstop>
   <tabstop>Eid</tabstop>
+  <tabstop>btnCKid</tabstop>
   <tabstop>Epw</tabstop>
   <tabstop>btnEnroll</tabstop>
   <tabstop>SIname</tabstop>
@@ -1618,8 +1674,6 @@ border:2px solid;</string>
   <tabstop>SPphone</tabstop>
   <tabstop>btnSearchPW</tabstop>
   <tabstop>checkBox</tabstop>
-  <tabstop>btnCKphone</tabstop>
-  <tabstop>btnCKid</tabstop>
   <tabstop>checkBox_2</tabstop>
   <tabstop>btnBack</tabstop>
   <tabstop>pushButton_6</tabstop>
@@ -1637,7 +1691,9 @@ border:2px solid;</string>
   <tabstop>btnGTlogin2</tabstop>
   <tabstop>btngotoSPW</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="Resources.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>btnSID</sender>
@@ -1943,6 +1999,134 @@ border:2px solid;</string>
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>btnSearchPW</sender>
+   <signal>clicked()</signal>
+   <receiver>LoginPage</receiver>
+   <slot>SearchPW()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>377</x>
+     <y>482</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>661</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SPname</sender>
+   <signal>returnPressed()</signal>
+   <receiver>SPid</receiver>
+   <slot>setFocus()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>432</x>
+     <y>288</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>436</x>
+     <y>332</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SPid</sender>
+   <signal>returnPressed()</signal>
+   <receiver>SPphone</receiver>
+   <slot>setFocus()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>396</x>
+     <y>348</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>400</x>
+     <y>389</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SPphone</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnSearchPW</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>348</x>
+     <y>414</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>352</x>
+     <y>470</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Ename</sender>
+   <signal>returnPressed()</signal>
+   <receiver>Ephone</receiver>
+   <slot>setFocus()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>318</x>
+     <y>243</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>276</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Ephone</sender>
+   <signal>returnPressed()</signal>
+   <receiver>Eid</receiver>
+   <slot>setFocus()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>369</x>
+     <y>306</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>370</x>
+     <y>338</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Eid</sender>
+   <signal>returnPressed()</signal>
+   <receiver>Epw</receiver>
+   <slot>setFocus()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>407</x>
+     <y>363</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>410</x>
+     <y>400</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Epw</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnEnroll</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>350</x>
+     <y>420</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>356</x>
+     <y>486</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>gotoHome()</slot>
@@ -1952,5 +2136,6 @@ border:2px solid;</string>
   <slot>gotoSPW()</slot>
   <slot>ProgressLogin()</slot>
   <slot>SearchID()</slot>
+  <slot>SearchPW()</slot>
  </slots>
 </ui>

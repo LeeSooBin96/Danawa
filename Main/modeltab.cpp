@@ -8,18 +8,18 @@ ModelTab::ModelTab(QWidget *parent)
 {
     typeNum=0;
     ui->setupUi(this);
-    ui->stackedWidget->setCurrentIndex(0);
+    // ui->stackedWidget->setCurrentIndex(0);
 
-    db=QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("DB_Car.db");
-    if(!db.open())
-    {
-        qDebug()<<db.lastError()<<"데이터베이스 파일 오픈 실패!";
-    }
-    else
-    {
-        qDebug("데이터베이스 파일 오픈");
-    }
+    // db=QSqlDatabase::addDatabase("QSQLITE");
+    // db.setDatabaseName("DB_Car.db");
+    // if(!db.open())
+    // {
+    //     qDebug()<<db.lastError()<<"데이터베이스 파일 오픈 실패!";
+    // }
+    // else
+    // {
+    //     qDebug("데이터베이스 파일 오픈");
+    // }
     ShowDefault();
 
     //테이블 열 크기 조절
@@ -54,20 +54,27 @@ void ModelTab::ShowDefault()
 
     UpdateTable(qry);
     //ui초기화면 설정
-    ui->stackedWidget->setCurrentIndex(0);
-    ui->mMonth->setCurrentIndex(11);
+    // ui->stackedWidget->setCurrentIndex(0);
+    // ui->mMonth->setCurrentIndex(11);
+    ui->btnMonth->click();
 }
 //월선택 클릭
 void ModelTab::btnMonthClicked()
 {
     ui->stackedWidget->setCurrentIndex(0);
-    // ui->btnMonth->setStyleSheet("QPushButton {color:blue}");
+    ui->mMonth->setCurrentIndex(11);
+    ui->btnMonth->setStyleSheet("QPushButton {color:blue}");
+    ui->btnDuration->setStyleSheet("QPushButton {}");
 }
 
 //기간선택 클릭
 void ModelTab::btnDurationClicked()
 {
     ui->stackedWidget->setCurrentIndex(1);
+    ui->dMonthS->setCurrentIndex(10);
+    ui->dMonthF->setCurrentIndex(11);
+    ui->btnDuration->setStyleSheet("QPushButton {color:blue}");
+    ui->btnMonth->setStyleSheet("QPushButton {}");
 }
 
 //테이블 갱신
@@ -232,6 +239,11 @@ void ModelTab::setCarType10()
 void ModelTab::setCarType11()
 {
     typeNum=11;
+    ShowDefault();
+}
+void ModelTab::setCarType12()
+{
+    typeNum=12;
     ShowDefault();
 }
 

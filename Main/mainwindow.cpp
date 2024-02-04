@@ -1,3 +1,6 @@
+#include <QDesktopServices>
+#include <QUrl>
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
@@ -16,7 +19,9 @@ MainWindow::MainWindow(QWidget *parent)
     //각 페이지 ui연결
     m=new ModelTab(this);
     ui->connectstdWidget->addWidget(m);
-    //임시
+    //초기 세팅
+    ui->btnWhole->click();
+    //임시 초기세팅
     ui->connectstdWidget->setCurrentWidget(m);
 
     //브랜드 버튼 연결
@@ -48,6 +53,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->BtnCar9,SIGNAL(clicked()),m,SLOT(setCarType9()));
     connect(ui->BtnCar10,SIGNAL(clicked()),m,SLOT(setCarType10()));
     connect(ui->BtnCar11,SIGNAL(clicked()),m,SLOT(setCarType11()));
+    connect(ui->BtnCar12,SIGNAL(clicked()),m,SLOT(setCarType12()));
 
 }
 
@@ -60,7 +66,7 @@ void MainWindow::ShowSales(void)
 {
     ui->mainstack->setCurrentIndex(0);
     btnStackBrandClicked();
-    this->setFixedSize(810,1000);
+    this->setFixedSize(811,1000);
     this->setGeometry(500,50,810,1000);
 }
 
@@ -69,6 +75,9 @@ void MainWindow::btnStackBrandClicked()
 {
     ui->menustack->setCurrentIndex(0);
     ui->brandstack->setCurrentIndex(0);
+
+    ui->btnStackBrand->setStyleSheet("QPushButton {color:blue;border: 1px solid;border-color: blue;}");
+    ui->btnStackCar->setStyleSheet("QPushButton {color: rgb(11, 11, 11);\nborder: 1px solid;border-color: rgb(143, 143, 143);}") ;
 }
 
 
@@ -76,6 +85,9 @@ void MainWindow::btnStackCarClicked()
 {
     ui->menustack->setCurrentIndex(1);
     ui->carstack->setCurrentIndex(0);
+
+    ui->btnStackCar->setStyleSheet("QPushButton {color:blue;border: 1px solid;border-color: blue;}");
+    ui->btnStackBrand->setStyleSheet("QPushButton {color: rgb(11, 11, 11);\nborder: 1px solid;border-color: rgb(143, 143, 143);}");
 }
 
 
@@ -87,6 +99,37 @@ void MainWindow::ChangeBStackPage()
 void MainWindow::ChangeCStackPage()
 {
     ui->carstack->setCurrentIndex((ui->carstack->currentIndex()+1)%2);
+}
+
+
+
+void MainWindow::on_pushButton_clicked()
+{
+    QDesktopServices::openUrl(QUrl("https://direct.samsungfire.com/ria/pc/product/car/?state=Front"));
+}
+
+
+void MainWindow::on_btnModel_clicked()
+{
+    ui->btnModel->setStyleSheet("QPushButton {color:blue;border: 1px solid;border-color: blue;}");
+    ui->btnBrand->setStyleSheet("QPushButton {color: rgb(11, 11, 11);\nborder: 1px solid;border-color: rgb(143, 143, 143);}");
+    ui->btnWhole->setStyleSheet("QPushButton {color: rgb(11, 11, 11);\nborder: 1px solid;border-color: rgb(143, 143, 143);}");
+}
+
+
+void MainWindow::on_btnWhole_clicked()
+{
+    ui->btnWhole->setStyleSheet("QPushButton {color:blue;border: 1px solid;border-color: blue;}");
+    ui->btnBrand->setStyleSheet("QPushButton {color: rgb(11, 11, 11);\nborder: 1px solid;border-color: rgb(143, 143, 143);}");
+    ui->btnModel->setStyleSheet("QPushButton {color: rgb(11, 11, 11);\nborder: 1px solid;border-color: rgb(143, 143, 143);}");
+}
+
+
+void MainWindow::on_btnBrand_clicked()
+{
+    ui->btnBrand->setStyleSheet("QPushButton {color:blue;border: 1px solid;border-color: blue;}");
+    ui->btnModel->setStyleSheet("QPushButton {color: rgb(11, 11, 11);\nborder: 1px solid;border-color: rgb(143, 143, 143);}");
+    ui->btnWhole->setStyleSheet("QPushButton {color: rgb(11, 11, 11);\nborder: 1px solid;border-color: rgb(143, 143, 143);}");
 }
 
 
